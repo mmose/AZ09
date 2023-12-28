@@ -1,0 +1,187 @@
+#cleanAccordionMain {
+	background: rgba(0,20,60,.2);
+  text-decoration-color: white;
+	max-width: 350px;
+	padding: 0;
+}
+
+#cleanAccordionMain {
+	margin: 0;
+	padding: 0;
+}
+
+#cleanAccordionMain span.inactive {
+	display: inline-block;
+	background: #4fb66f;
+	text-align: center;
+	padding: 2px 0;
+	border-radius: 2px;
+	width: 60px;
+	font-size: 8px;
+	color: #fff;
+}
+
+#cleanAccordionMain dl.accordion {
+	overflow: hidden;
+}
+
+#cleanAccordionMain dl.accordion:hover  {
+	cursor: default;
+}
+
+#cleanAccordionMain dl.accordion:after {
+	content: ".";
+	display: block;
+	height: 0;
+	clear: both;
+	visibility: hidden;
+}
+
+#cleanAccordionMain dl.accordion dt {
+	padding: 0;
+	margin: 0;
+	background-color: transparent;
+	overflow: hidden;
+	margin-bottom: 0px;
+	position: relative;
+}
+
+#cleanAccordionMain dl.accordion dt.accordionLastDt {
+	margin-bottom: none;
+}
+
+#cleanAccordionMain dl.accordion dt a {
+	color: #fff;
+	text-decoration: none;
+	display: block;
+	font-weight: normal;
+	padding: 0px 1px;
+}
+
+#cleanAccordionMain dl.accordion dt a:hover, #cleanAccordionMain dl.accordion dt a:hover {
+	cursor: pointer;
+}
+
+#cleanAccordionMain dl.accordion dt a:focus {
+	outline: none;
+}
+
+#cleanAccordionMain dl.accordion dt.tab_1 a {
+	background-color: rgba(0,20,60,.1);
+}
+
+#cleanAccordionMain dl.accordion dt.tab_1 a i{
+	background-color: #00a8ff;
+}
+
+#cleanAccordionMain dl.accordion dt.tab_2 a {
+	background-color: rgba(0,20,60,.1);
+}
+
+#cleanAccordionMain dl.accordion dt.tab_2 a i {
+	background-color: magenta;
+}
+
+#cleanAccordionMain dl.accordion dt.tab_3 a {
+	background-color: rgba(0,20,60,.1);
+}
+
+#cleanAccordionMain dl.accordion dt.tab_3 a i{
+	background-color: #4cd137;
+}
+
+#cleanAccordionMain dl.accordion dt.tab_4 a {
+	background-color: rgba(0,20,60,.1);
+}
+
+#cleanAccordionMain dl.accordion dt.tab_4 a i{
+	background-color: orange;
+}
+
+#cleanAccordionMain dl.accordion dt i {
+	font-size: 6px;
+	margin: 3.46154px;
+	float: left;
+	padding: 4px 6px;
+	border-radius: 4px;
+	font-style: normal;
+	margin-right: 15px;
+}
+
+#cleanAccordionMain dl.accordion dt i.fa {
+	padding: 4px 5px;
+}
+
+#cleanAccordionMain dl.accordion dt h4 {
+	font-size: 12px;
+	display: inline-block;
+  height:10px;
+}
+
+#cleanAccordionMain dl.accordion dt span.details {
+	float: right;
+	font-family: arial, sans-serif;
+  font-size: 12;
+	padding: 5px 12px 5px 12px;
+	position: relative;
+	margin-top: -3.5px;
+}
+
+#cleanAccordionMain dl.accordion dt span.details:hover {
+	cursor: pointer;
+}
+
+#cleanAccordionMain dl.accordion dt span.details i {
+	background: none;
+	float: right;
+	padding: 0;
+	margin-right: 0;
+	margin-left: 20px;
+
+}
+
+#cleanAccordionMain dl.accordion dt span.details span.inactive {
+	position: absolute;
+	left: -80px;
+	top: 4.66667px;
+	background: #CD3333;
+}
+
+#cleanAccordionMain dl.accordion dd {
+	padding: 0;
+	margin: 0;
+	padding: 10px 15px 10px 10px;
+	text-indent: none;
+	background-color: transparent;
+	color: white;
+}
+
+#cleanAccordionMain dl.accordion dd.accordionLastDd {
+	position: relative;
+	border-bottom: 0;
+}
+
+#cleanAccordionMain dl.accordion dd p {
+	font-size: 14px;
+	padding: 8px 0;
+}
+
+#cleanAccordionMain dl.accordion dd p a {
+	float: left;
+	color: #0e72b6;
+	text-decoration: none;
+}
+
+#cleanAccordionMain dl.accordion dd p a i {
+	margin-left: 15px;
+}
+
+#cleanAccordionMain dl.accordion dd p a:hover {
+	text-decoration: underline;
+	cursor: pointer;
+}
+
+#cleanAccordionMain dl.accordion dd p a:hover i {
+	text-decoration: none;
+	cursor: pointer;
+}

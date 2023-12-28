@@ -1,0 +1,82 @@
+body {
+	/*display: flex;
+	flex-flow: column wrap;
+	*/
+}
+
+input:focus {
+	outline: none;
+}
+#search-bar {
+	margin-top: 2vh;
+}
+#search-input {
+	background: transparent;
+	padding: 8px 40px 8px 10px;
+	color: black;
+}
+.fa-search {
+	font-size: 25px;
+	margin-left: -40px;
+	color: lightgray;
+}
+.fa-search:hover {
+	color: white;
+	cursor: pointer;
+}
+#random {
+	color: lightgray;
+	text-decoration: none;
+	font-size: larger;
+}
+#random:hover {
+	color: white;
+}
+#suggested-searches {
+	display: none;
+	background-color: transparent;
+	width: 330px;
+	color: white;
+	margin-left:10%; 
+	/*margin-bottom:20%; */
+}
+#suggested-searches ul {
+	list-style-type: none;
+	padding: 0;
+	margin: 5px;
+}
+#suggested-searches li {
+	padding: 3px;
+}
+#suggested-searches li:hover {
+	background-color: rgba(29, 31, 32, 0.85);
+	cursor: pointer;
+}
+#results-container {
+	display: flex;
+	flex-flow: column wrap;
+	/*justify-content: center;
+	align-items: center;
+	*/
+}
+.result-item {
+	width: 70%;
+	margin: 1px 0;
+	padding: 1px;
+}
+.result-item h3 {
+	margin: 0 0 3px 0;
+}
+.result-item a {
+	color: white;
+	font-size: 11px;
+	font-family:  "Raleway";
+}
+.result-item a:hover {
+	color: white;
+}
+.result-item p {
+	font-size: 20px;
+	margin: 0;
+	color: lightgray;
+}

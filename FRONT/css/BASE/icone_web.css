@@ -1,0 +1,44 @@
+/*body {
+  padding: 0;
+  margin: 0;
+  background: #262626;
+}
+*/
+
+.uliconeweb {
+  margin: 0;
+  padding: 0;
+  display: flex;
+  position: relative;
+}
+
+.ulliconeweb {
+  list-style: none;
+  float:right;
+  margin: 15 1595px;
+  
+} 
+
+.aiconeweb {
+  position: relative;
+  display: block;
+  text-align: center;
+  background: transparent;
+  border-radius: 50%;
+  color: #666;
+  font-size: 30px;
+  transition: 1s;
+
+}
+
+
+ul li .aiconeweb:hover:before {
+  transform: scale(1.1);
+  box-shadow: 0 0 15px #ffee10
+}
+
+ul li .aiconeweb:hover {
+  color: #ffee10;
+  box-shadow: 0 0 25px #ffffff;
+  text-shadow:0 0 25px #ffffff;
+}

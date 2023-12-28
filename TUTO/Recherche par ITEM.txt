@@ -1,0 +1,17 @@
+  let recherche_item = networkSeries.getDataItemById(networkSeries.dataItems, P31);
+  if (recherche_item)
+  {
+      console.log("trouvé");
+      document.getElementById("info_navigation").innerHTML = "<i>"+texte+"</i>"+": "+recherche_item.detail;
+      recherche_resultat=true;
+
+      if (recherche_item.level==1){
+      recherche_item.node.circle.fill = am4core.color("white");
+      //recherche_item.node.openPopup(recherche_item.detail,recherche_item.name);
+
+    } else if (recherche_item.level>1){
+      recherche_item.parent.node.isActive=true;
+      recherche_item.node.circle.fill = am4core.color("red");
+      //recherche_item.node.openPopup(recherche_item.detail,recherche_item.name);
+    }
+  }

@@ -1,0 +1,91 @@
+@import url(https://fonts.googleapis.com/css?family=Roboto:300,400,600);
+.snip1336 {
+  font-family: 'Roboto', Arial, sans-serif;
+  position: relative;
+  overflow: hidden;
+  margin: 0px;
+  min-width: 400px;
+  max-width: 400px;
+  width: 100%;
+  color: black;
+  text-align: left;
+  line-height: 3.0em;
+  background-color: transparent;
+}
+.snip1336 * {
+  -webkit-box-sizing: border-box;
+  box-sizing: border-box;
+  -webkit-transition: all 0.25s ease;
+  transition: all 0.25s ease;
+}
+.snip1336 img {
+  max-width: 110%;
+  vertical-align: top;
+  opacity: 0.17;
+}
+.snip1336 figcaption {
+  width: 100%;
+  top:-250px;
+  background-color: rgb(255,159,99,0.60);
+  padding: 25px;
+  position: relative;
+}
+/*.snip1336 figcaption:before {
+  position: absolute;
+  content: '';
+  bottom: 100%;
+  margin-bottom: 200px;
+  left: 0;
+  width: 0;
+  height: 0;
+  border-style: solid;
+  border-width: 55px 0 0 400px;
+  border-color: transparent transparent transparent #141414;
+}*/
+.snip1336 figcaption a {
+  padding: 0px;
+  border: 1px solid #ffffff;
+  color: #ffffff;
+  font-size: 0.7em;
+  text-transform: uppercase;
+  margin: 10px 0;
+  display: inline-block;
+  opacity: 0.65;
+  width: 47%;
+  text-align: center;
+  text-decoration: none;
+  font-weight: 600;
+  letter-spacing: 1px;
+}
+.snip1336 figcaption a:hover {
+  opacity: 1;
+}
+.snip1336 .profile {
+  border-radius: 100%;
+  position: absolute;
+  bottom: 100%;
+  left: 25px;
+  top:-50px;
+  z-index: 1;
+  max-width: 90px;
+  opacity: 1;
+  box-shadow: 0 0 15px rgba(0, 0, 0, 0.3);
+}
+.snip1336 .follow {
+  margin-right: 4%;
+  border-color: #2980b9;
+  color: #2980b9;
+}
+.snip1336 h2 {
+  margin-top: 50px;
+  font-weight: 700;
+}
+.snip1336 h5 {
+  margin-top: -40px;
+  font-weight: 200;
+}
+
+.snip1336 p {
+  font-size: 0.8em;
+  opacity: 0.8;
+}

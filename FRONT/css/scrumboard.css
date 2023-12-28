@@ -1,0 +1,183 @@
+/** {
+  margin: 0;
+  padding: 0;
+  outline: 0;
+  box-sizing: border-box;
+}*/
+
+ .wrapper {
+  margin-top:130px;
+  height: 50%;
+
+}
+
+/*body {
+  font-weight: 300;
+  background-image: linear-gradient(to left, #000428, #004e92);
+  color: #fff;
+  font-size: 14px;
+}*/
+
+.ul-board-web {
+  list-style-type: none;
+  margin: 0;
+  padding: 0;
+  
+
+}
+
+a {
+  /*text-decoration: none;
+  color: inherit;*/
+}
+
+.clear:after {
+  content: "";
+  display: table;
+  clear: both;
+
+}
+
+.hide {
+  display: none !important;
+
+}
+
+header {
+  background-color: rgba(0, 0, 0, 0.4);
+
+}
+header li {
+  padding: 15px;
+  float: left;
+  width: 20%;
+  text-align: center;
+  position: relative;
+  text-transform: uppercase;
+  box-sizing: border-box;
+}
+header li:after {
+  content: "";
+  position: absolute;
+  left: 0;
+  bottom: 0;
+  width: 100%;
+  height: 1px;
+
+}
+header li:nth-child(1):after {
+  background: linear-gradient(to left, #444, #444);
+}
+header li:nth-child(2):after {
+  background: linear-gradient(to left, #444, #444);
+}
+header li:nth-child(3):after {
+  background: linear-gradient(to left, #444, #444);
+}
+header li:nth-child(4):after {
+  background: linear-gradient(to left, #444, #444);
+}
+header li:nth-child(5):after {
+  background: linear-gradient(to left, #444, #444);
+}
+
+.wrapper {
+  overflow: hidden;
+
+}
+
+.dashboard {
+  height: calc(100% - 101px);
+
+/* POUR SCROLLER EN BAS */
+overflow-y: scroll;
+scrollbar-color: #444 #444;
+scrollbar-width: thin;
+
+}
+.dashboard > div {
+  float: left;
+  height: 100%;
+  border-right: 1px solid rgba(0, 0, 0, 0.4);
+  width: 20%;
+  box-sizing: border-box;
+
+}
+
+.footer-scrumboard {
+  background-color: rgba(0, 0, 0, 0.4);
+  height: 50px;
+  position: relative;
+  border-top: 1px solid rgba(0, 0, 0, 0.4);
+
+}
+
+
+
+
+/*
+/* PARTIE ACCORDEON */ 
+
+/* GENERAL STYLES */
+ul {
+  list-style-type: none;
+  padding-left: 0;
+}
+ul > li {
+  position: relative;
+}
+ul > li > span,
+ul > li > label {
+  margin-top:-16px;
+  font-size: 17px;
+  display: block;
+  width: 93,5%;
+  text-align: left;
+  padding: 0.25em 1em 0.25em 0.5em;
+  background: black;
+  /*font-size: 1em;*/
+
+
+  /*cursor: pointer;*/
+}
+ul > li > span:after,
+ul > li > label:after {
+  /*content: "\25B6";*/
+  speak: none;
+  position: absolute;
+  /*right: 0.5em;*/
+}
+ul > li.active > span:after,
+ul > li.active > label:after,
+.input-accordion-scrumboard:checked ~ label:after {
+  content: "\25BC";
+  /*speak: none;*/
+  position: absolute;
+
+}
+
+
+.input-accordion-scrumboard {
+  position: absolute;
+  top: 10;
+  left: 0;
+  width: 90%;
+  height: 4em;
+  opacity: 0.001;
+  /*cursor: pointer;*/
+}
+.css-html ul > li > ol {
+	text-align: left;
+	font-size: 16px;
+ 	 max-height: 0em;
+	overflow: hidden;
+	-webkit-transition-duration: .5s;
+	-moz-transition-duration: .5s;
+	-ms-transition-duration: .5s;
+	-o-transition-duration: .5s;
+	transition-duration: .5s;
+}
+.css-html input:checked ~ ol {
+  max-height: 10em;
+}
+

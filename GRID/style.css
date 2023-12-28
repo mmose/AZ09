@@ -1,0 +1,128 @@
+@font-face {
+    font-family: 'BLOKK';
+    src: url('https://s3-us-west-2.amazonaws.com/s.cdpn.io/41632/BLOKKNeue-Regular.ttf');
+    font-weight: normal;
+    font-style: normal;
+}
+
+:root {
+  --transition-easing: cubic-bezier(1, 0, 0, 1);
+  --mayaBlue: #59C4FF;
+  --coolBlue: #009EF5;
+}
+
+
+@media screen and (-webkit-min-device-pixel-ratio:0) {
+    @font-face {
+        font-family: 'BLOKK';
+        src: url('https://blokkfont-losgordos.netdna-ssl.com/v2/BLOKKNeue-Regular.svg') format('svg');
+    }
+}
+
+body {
+    -webkit-font-smoothing: antialiased;
+    -moz-osx-font-smoothing: grayscale;
+}
+html,
+body {
+  font-family: "BLOKK";
+  margin: 0;
+  background: #38383D;
+}
+
+.container {
+  padding: 16px;
+  display: grid;
+  grid-gap: 16px;
+  grid-template-columns: repeat(auto-fill, minmax(275px, 1fr));
+}
+
+.flat {
+  box-shadow: none !important;
+}
+
+.card {
+  background: #273746 ;
+  box-shadow: 0 2px 16px rgba(0,0,0,.26);
+  border-radius: 4px;
+  overflow: hidden;
+  color: #e2e2e4;
+  font-size: 18px;
+  height: 245px;
+  transition: .3s var(--transition-easing);
+
+}
+
+.block {
+  background: rgba(0, 155, 241, 0.26);
+  height: 32px;
+  border-radius: 6px;
+  margin-bottom: 16px;
+}
+
+.block:nth-child(1n) {
+  width: 50%;
+}
+
+.block:nth-child(2n) {
+  width: 100%;
+}
+.block:nth-child(3n) {
+  width: 75%;
+}
+
+.card:hover {
+  cursor: pointer;
+}
+
+.card-header {
+  background: var(--mayaBlue);
+  height: 150px;
+  padding: 16px;
+  transition: .3s var(--transition-easing);
+}
+
+.card-full .card-header {
+  background: var(--coolBlue);
+  height: 24rem;
+  display: grid;
+}
+
+.card-header .block {
+  visibility: hidden;
+}
+
+.card-full .card-header .block {
+  visibility: visible;
+  background: rgba(255,255,255,.54);
+  height: 64px;
+  align-self: end;
+}
+
+.fadeOut {
+  opacity: 0;
+}
+
+.fadeIn {
+  opacity: 1;
+}
+
+.card-full {
+  left: 0 !important;
+  top: 0 !important;
+  right: 0 !important;
+  bottom: 0 !important;
+  width: 100% !important;
+  height: 100% !important;
+  border-radius: 0 !important;
+  font-size: 32px;
+  box-shadow: 0 1px 26px rgba(0,0,0,.12);
+}
+
+.card > img {
+  max-width: 100%;
+}
+
+.card-body {
+  padding: 16px;
+}

@@ -1,0 +1,147 @@
+#wikiprofilcard {
+  background-color: #393B45;
+  width: 104%;
+  margin-left: -10px;
+  height: 105%;
+  margin-top:-35px;
+  /*margin: 10vh auto;*/
+  border-radius: 5px;
+  padding-bottom: 1px;
+  /*box-shadow: 2px 2px 5px #4069E2;*/
+}
+
+
+.wikiprofilh1 {
+  padding: 30px 10;
+  text-align: left;
+  margin-left: 150px;
+  font-weight: 500;
+  /*
+  color: white;
+  text-align: right;
+  width: 50%;
+  background-color: #E6EBEE;
+  border-radius: 25px 25px 0 0;
+  color: #393B45;
+  padding: 20px 0;
+  font-weight: 500;
+  margin-left: 0;
+  */
+}
+
+.wikiprofilh5 {
+  text-align: left;
+  padding: 0px 10;
+  margin-left: 150px;
+  margin-top:-30px;
+  font-weight: 500;
+
+}
+
+
+
+.wikiprofilimage-crop {
+  display: block;
+  position: relative;
+  background-color: #E6EBEE;
+  width: 110px;
+  height: 110px;
+  margin: 0 auto;
+  margin-top: -115px;
+  margin-left: 20px;
+  overflow: hidden;
+  border-radius: 50%;
+  box-shadow: 1px 1px 5px #4069E2;
+}
+
+#wikiprofilavatar {
+  display: inline;
+  height: 230px;
+  width: auto;
+  margin-left: -34px;
+}
+
+#wikiprofilbio {
+  display: block;
+  margin: 0px auto;
+  width: 90%;
+  margin-left: 20px;
+  margin-top:40px;
+  height: auto;
+}
+
+#wikiprofilbio p {
+  color: #E6EBEE;
+  font-weight: lighter;
+  font-size: 15px;
+  text-align: justify;
+}
+
+#wikiprofilstats {
+  display: flex;
+  flex-direction: row;
+  height: auto;
+  width: 280px;
+  justify-content: space-between;
+  align-items: center;
+  margin: 0 auto;
+  margin-left: 300px;
+  margin-top:-10px;
+  font-weight: 500;
+}
+
+.wikiprofilcol {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  width: auto;
+}
+
+.wikiprofilstat {
+  font-size: 25px;
+  margin: 0;
+}
+
+.wikiprofillabel {
+  margin: 0;
+}
+
+#wikiprofilbuttons {
+  display: flex;
+  margin: 0 auto;
+  justify-content: space-between;
+  width: 280px;
+  margin-left: 20px;
+  margin-top:50px;
+}
+
+button {
+  display: block;
+  position: relative;
+  padding: 10px 0;
+  width: 130px;
+  margin: 30px 0;
+  border-radius: 25px;
+  border: none;
+  font-size: 20px;
+  letter-spacing: 0.2px;
+  font-weight: 500;
+  background-color: #4069E2;
+  color: #E6EBEE;
+}
+
+button:focus {
+  display: none;
+}
+
+button:hover {
+  transform: scale(1.03);
+  cursor: pointer;
+  transition: all 0.2s ease-in-out;
+}
+
+#wikiprofilmsg{
+  background-color: #E6EBEE;
+  color: #393B45;
+}

@@ -1,0 +1,19 @@
+    if (node.dataItem.pointe)
+     {
+         if(node.dataItem.pointe.includes(texte))
+         {
+           recherche_resultat=true;
+           nombre_resultat=nombre_resultat+1;
+           node.dataItem.resultat=nombre_resultat;
+          document.getElementById("info_navigation").innerHTML = nombre_resultat+" résultat(s) pour "+"<i>"+texte+"</i>";
+           //chart.legend.labels.template.text = "[bold {color}]{name}[/] :"+nombre_resultat;
+           chart.legend.opacity=1;
+           chart.legend.labels.template.text = "[bold {color}]{resultat}[/]";
+           node.outerCircle.fill = am4core.color("black");
+           node.circle.fill=am4core.color("black");
+           node.openPopup(node.dataItem.detail,texte);
+           if(node.dataItem.level==1) {node.outerCircle.radius=70;}
+         }
+     }
+     console.log("PAS pointé !");
+  })

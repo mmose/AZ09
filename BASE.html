@@ -1,0 +1,325 @@
+<meta charset="UTF-8">
+
+<!-- Resources -->
+<script src="BACK/Jquery/jquery-3.2.1.min.js"></script>
+<script src="BACK/Jquery/jquery-ui.min.js"></script>
+<script src="BACK/JS/AMCORE/core.js"></script>
+<script src="BACK/JS/AMCORE/charts.js"></script>
+<script src="BACK/JS/AMCORE/forceDirected.js"></script>
+<script src="BACK/JS/AMCORE/animated.js"></script>
+<script src="BACK/JS/AMCORE/material.js"></script>
+
+<script src="BACK/JS/BASE/sassy_accordion.js"></script>
+<script src="BACK/JS/BASE/side_menu_left.js"></script>
+<script src="BACK/JS/BASE/rightclick_icone_web.js"></script>
+
+
+<!-- Stylesheet CHARTDIV -->
+<link rel="stylesheet" media="all" href="FRONT/css/chartdiv.css" />
+<link rel="stylesheet" media="all" href="FRONT/css/dark.css" />
+
+<!-- Stylesheet BASE -->
+<link rel="stylesheet" media="all" href="FRONT/css/BASE/body.css" />
+<link rel="stylesheet" media="all" href="FRONT/css/BASE/suggestion_recherche.css"/>
+<link rel="stylesheet" media="all" href="FRONT/css/BASE/NEW_suggestion_recherche.css"/>
+<link rel="stylesheet" media="all" href="FRONT/css/BASE/add.css" />
+<link rel="stylesheet" media="all" href="FRONT/css/BASE/radar.css" />
+<link rel="stylesheet" media="all" href="FRONT/css/BASE/icone_web.css" />
+<link rel="stylesheet" media="all" href="FRONT/css/BASE/wikiprofil_card.css" />
+<link rel="stylesheet" href="FRONT/css/scrumboard.css" />
+
+<!-- Stylesheet SITE -->
+<link rel="stylesheet" media="all" href="FRONT/css/side_menu.css" />
+<link rel="stylesheet" media="all" href="FRONT/css/sassy_accordion.css" />
+<link rel="stylesheet" media="all" href="FRONT/css/box_popup.css" />
+<link rel="stylesheet" media="all" href="FRONT/css/popup_fullscreen.css" />
+
+<!-- Stylesheet QWANT -->
+<link rel="stylesheet" href='FRONT/css/wstyle/css/common.css'/>
+<link rel="stylesheet" href='FRONT/css/wstyle/css/welcome.css'/>
+
+
+<!-- Chart code -->
+<script src="BACK/JS/AMCORE/base.js"></script>
+<!-- Chart code -->
+
+
+
+
+<!-- DEB ICONE NAVIGATION -->
+<div>
+  <ul class="uliconeweb">
+    <li class="ulliconeweb" >
+      <a title="" class="aiconeweb" id="NAV-ICONE-WEB-LINK" target="_blank  href="#">
+            <img onclick=openNav(); oncontextmenu=click_droit_icone_web(); id="NAV-ICONE-WEB" src="FRONT/media/icones/menu/web.png" style="background-image: url(no.png); width:50px;
+            background-position:50% 50%; -webkit-border-radius: 20px;"> </img>
+      </a>
+    </li>
+  </ul>
+</div>
+<!-- FIN ICONE NAVIGATION -->
+
+
+<!-- DEB BARRE RECHERCHE -->
+<!-- <div id="search-bar"  class="search__bar__form" style="margin-left:42%; margin-top:-40px">
+	<!-- <input id="search-input" type="text" class="search__bar__input">
+	<span id="bouton_search" class="icon__search__submit" ></span>
+</div>
+-->
+
+
+
+
+
+<!-- FIN BARRE RECHERCHE -->
+
+
+<!-- DEB BARRE SUGGESTION RECHERCHE -->
+<body>
+  <form id="form" onsubmit="recherche()" class="search__bar__form" style="margin-left:42%; margin-top:-30px" >
+    <input  style="margin-top:10px; margin-left:20px; height:30px; " class="search__bar__input" type="text" id="input" onkeydown="ecriture()"></input>
+    <button id="searchClick" type="submit" class="icon__search__submit"></button>
+  </form>
+  <!-- <div id="myNav3" class="overlay-3">
+    <a href="javascript:void(0)" class="closebtn" onclick="closeSuggestion();">&times;</a>
+      <div class="overlay-content">
+<div id="suggested-searches"  ></div>
+      </div>
+  </div> -->
+</body>
+<!-- FIN BARRE SUGGESTION RECHERCHE -->
+
+
+<div id="chartdiv"> </div>
+
+
+<!-- DEB LEFT SIDE MENU -->
+ <div class="side_menu">
+    <div class="burger_box">
+        <div class="menu-icon-container">
+            <a href="#" class="menu-icon js-menu_toggle closed">
+                <span class="menu-icon_box">
+                    <span class="menu-icon_line menu-icon_line--1"></span>
+                    <span class="menu-icon_line menu-icon_line--2"></span>
+                    <span class="menu-icon_line menu-icon_line--3"></span>
+                </span>
+            </a>
+        </div>
+    </div>
+    <div class="container">
+      <!-- DEBUT  Sassy Accordion  -->
+      <div id="cleanAccordionMain" class="cleanAccordion">
+        <dl class="accordion">
+          <dt id="data" class="tab_1 singleTab">
+            <a href class="accordionSlide">
+              <div class="accordionContent">
+                <h4>DATA <i class="fa fa-briefcase"></i> </h4>
+                <span id="span_resultat_data" class="details">  </span>
+              </div>
+            </a>
+          </dt>
+          <dd id="scroller_resultat_data" class="scroller">
+          </dd>
+
+
+          <dt id="crea" class="tab_2 singleTab">
+            <a href class="accordionSlide">
+              <div class="accordionContent">
+          <h4>CREA <i class="fa fa-briefcase"></i> </h4>
+           <span id="span_resultat_crea" class="details">  </span>
+              </div>
+            </a>
+          </dt>
+          <dd id="scroller_resultat_crea" class="scroller">
+          </dd>
+
+
+          <dt id="mata" class="tab_3 singleTab">
+            <a href class="accordionSlide">
+              <div class="accordionContent">
+          <h4>MATA <i class="fa fa-briefcase"></i> </h4>
+                <span id="span_resultat_mata" class="details">  </span>
+              </div>
+            </a>
+          </dt>
+          <dd id="scroller_resultat_mata" class="scroller">
+          </dd>
+
+
+          <dt id="enta" class="tab_4 singleTab">
+            <a href class="accordionSlide">
+              <div class="accordionContent">
+            <h4>ENTA <i class="fa fa-briefcase"></i> </h4>
+                <span id="span_resultat_enta" class="details"> </span>
+              </div>
+            </a>
+          </dt>
+          <dd id="scroller_resultat_enta" class="scroller">
+          </dd>
+
+          <dt class="tab_5 singleTab">
+            <a href class="accordionSlide">
+              <div class="accordionContent">
+            <h4> Résultats  <i class="fa fa-briefcase"></i> </h4>
+                <span id="span_resultat_all" class="details"> </span>
+              </div>
+            </a>
+          </dt>
+          <dd id="scroller_resultat_all" class="scroller">
+
+          </dd>
+
+
+          <dt class="tab_5 singleTab">
+            <a href class="accordionSlide">
+              <div class="accordionContent">
+            <h4> + <i class="fa fa-briefcase"></i> </h4>
+                <span id="span_resultat_synonymes" class="details"> </span>
+              </div>
+            </a>
+          </dt>
+          <dd id="scroller_resultat_synonymes" class="scroller">
+              <!-- ICI seront resultats synonymes -->
+          </dd>
+
+
+        </dl>
+      </div>
+      <!-- END  Sassy Accordion   -->
+    </div>
+</div>
+<!-- FIN SIDE MENU -->
+
+
+<!-- DEB PARTIE NAVIGATION -->
+<body id="navigation">
+  <div id="myNav1" class="overlay-2">
+    <a href="javascript:void(0)" class="closebtn" onclick="closeNav()">&times;</a>
+      <div class="overlay-content">
+
+
+        <!-- REMISE DE LA BARRE DE RECHERCHE ICI -->
+        <br>
+        <div id="search-bar2" class="search__bar__form" style="margin-left:42%; margin-top: -40px">
+        	<input id="search-input2" type="text" class="search__bar__input">
+        	<span id="bouton_search2" class="icon__search__submit" ></span>
+        </div>
+        <br>
+        <!-- FIN REMISE DE LA BARRE DE RECHERCHE -->
+
+
+    <!-- CONSTRUCTION DE SCRUM BOARD -->
+    <div class="wrapper" style="visibility:hidden;">
+      <header class="clear">
+        <ul class="ul-board-web">
+          <li>Rejected</li>
+          <li>Pending</li>
+          <li>Development</li>
+          <li>Testing</li>
+          <li>Production</li>
+        </ul>
+      </header>
+      <section id="dashboard" class="dashboard clear">
+        <div id="rejected" class="rejected">  </div>
+        <div id="pending" class="pending"> </div>
+        <div id="development" class="development"> </div>
+        <div id="testing" class="testing"></div>
+        <div id="production" class="production">
+          <!-- DEBUT ACCORDEON -->
+         <section id="section-production" class="css-html">
+          <!--       <ul id="ul-page-web">
+              <li>
+                <input class="input-accordion-scrumboard" type="checkbox" />
+                <label> OK </label>
+                <ol>
+                   <a style="color:white;" target="_blank"  href="https://www.allocine.fr/"> Cliquez sur ce lien </a>
+                  <li>Aliquam tincidunt mauris eu risus.</li>
+                  <li>Vestibulum auctor dapibus neque.</li>
+                </ol>
+              </li>
+            </ul>
+            -->
+
+          </section>
+          <!-- FIN ACCORDEON -->
+        </div>
+      </section>
+
+      <footer class="footer-scrumboard">
+        <ul>
+        </ul>
+     </footer>
+      </div>
+    <!-- END CONSTRUCTION DE SCRUM BOARD -->
+
+
+      </div>
+  </div>
+</body>
+<!-- FIN PARTIE NAVIGATION -->
+
+
+</div>
+
+
+
+<!-- DEB FOOTER -->
+<div id="footer">
+<img alt="" src="FRONT/media/icones/bullhorn.png" onclick="load_actu();" style="width:42px; float:right; margin-right:16px; margin-bottom:30px; ">
+<h5 id="info_navigation" style="text-align:center; padding-top:60px; margin-left:50px;">  </h5>
+</div>
+<!-- FIN FOOTER -->
+
+
+
+<!-- DEBUT FENETRE POP UP AFFICHE RESULTAT WIKI -->
+<div id="popup1" class="overlay">
+	<div class="popup">
+		<h2 style="text-align:center"></h2>
+		<a class="close" href="#">&times;</a>
+  		<!-- <div id="content_popup" class="content"> -->
+
+<!-- https://codepen.io/msichterman/details/zVmEpG --!>
+<!--  DEBUT SOCIAL PROFILE CARD !-->
+<div id="wikiprofilcard">
+  <h1 id ="wikiprofil_titre"class="wikiprofilh1">Titre</h1>
+  <h5 id ="wikiprofil_description" class="wikiprofilh5">Extract</h5>
+  <div class="wikiprofilimage-crop">
+    <img id="wikiprofilavatar" src="https://upload.wikimedia.org/wikipedia/commons/thumb/9/9a/Ronaldinho_Ga%C3%BAcho_em_junho_de_2019.jpg/171px-Ronaldinho_Ga%C3%BAcho_em_junho_de_2019.jpg"></img>
+  </div>
+  <div id="wikiprofilstats">
+    <div class="wikiprofilcol">
+      <p class="wikiprofilstat">0</p>
+      <p class="wikiprofillabel">Age</p>
+    </div>
+        <div class="wikiprofilcol">
+      <p class="wikiprofilstat">457</p>
+      <p class="wikiprofillabel">Sexe</p>
+    </div>
+        <div class="wikiprofilcol">
+      <p class="wikiprofilstat">229</p>
+      <p class="wikiprofillabel">Secteur</p>
+    </div>
+  </div>
+  <div id="wikiprofilbio">
+    <p>Hello, my name is John! Bacon ipsum dolor amet short ribs prosciutto strip steak, pig ham tongue buffalo beef ribs hamburger pork venison. </p>
+  </div>
+  <div id="wikiprofilbuttons">
+    <button>Sélectionner</button>
+    <button id="wikiprofilmsg">Voir sur Wikipédia</button>
+  </div>
+</div>
+<!--  FIN SOCIAL PROFILE CARD !-->
+
+
+  		  <!-- END CONTENT POPUP </div> -->
+  	   </div>
+  </div>
+<!-- FIN FENETRE POP UP AFFICHE RESULTAT WIKI -->
+
+
+<!-- SCRIPT POUR LES POPUPS -->
+<script src="BACK/JS/BASE/popups.js"></script>
+<!-- END SCRIPT POUR LES POPUPS -->
+
+<script src="BACK/JS/BASE/suggestion_recherche.js"></script>
